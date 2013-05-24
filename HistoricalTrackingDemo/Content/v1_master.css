@@ -1,0 +1,86 @@
+﻿body {
+    height: 100%;
+    width: 100%;
+    background-color: #3F93CC;
+    font: normal 1em Verdana;
+    color: #666;
+}
+
+a, a:visited {
+    font: normal 1em Verdana;
+    color: #fff;
+    text-decoration: none;
+}
+
+    a.ack {
+        margin-left: 1em;
+        color: #444;
+    }
+
+    a.filter {
+        color: #444;
+    }
+
+#key {
+    margin-left:.5em;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5em;
+    left: 50%;
+    margin-left: -30em;
+    width: 60em;
+    background-color: #fff;
+    -webkit-box-shadow: .4em .4em 1em .1em #444444;
+    box-shadow: .4em .4em 1em .1em #444444;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    min-height: 15em;
+}
+
+#map {
+    margin:auto;
+    margin-top:.5em;
+    width: 59em;
+    height: 29em;
+    border: .1em solid #444;
+}
+
+.div-page-title {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-top: -.5em;
+    overflow: hidden;
+    font-size: 29em;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    display: none;
+    color: #fff;
+}
+
+.segment {
+    display: none;
+}
+
+.projects-segment-active {
+}
+
+.segment-active {
+    margin-bottom:1em;
+}
+
+    .segment-active p {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+.segment-span {
+    margin: 1em;
+}
+
+.segment-experience {
+    margin-left: 5em;
+}

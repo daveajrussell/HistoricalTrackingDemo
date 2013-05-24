@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HistoricalTrackingDemo.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <link href="~/Content/v1_master.css" rel="stylesheet" /> 
+    <link href="~/Content/v1_selection.css" rel="stylesheet" /> 
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Path="~/Scripts/Pages/Master.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="div-page-title">
+            <%= this.Page.Title %>
+        </div>
+
+        <section id="main">
+
+            <div id="body">
+                 <asp:ContentPlaceHolder runat="server" ID="MainContent">
+
+                 </asp:ContentPlaceHolder>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

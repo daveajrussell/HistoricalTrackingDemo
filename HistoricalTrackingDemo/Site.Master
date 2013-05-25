@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HistoricalTrackingDemo.SiteMaster" %>
 
+<%@ Register TagPrefix="ctl" TagName="SiteSelect" Src="~/Controls/ctlSiteSelection.ascx" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -24,12 +26,9 @@
         </div>
 
         <section id="main">
-
-            <div id="body">
-                 <asp:ContentPlaceHolder runat="server" ID="MainContent">
-
-                 </asp:ContentPlaceHolder>
-            </div>
+            <ctl:SiteSelect runat="server" ID="ctlSiteSelection" />
+            <asp:ContentPlaceHolder runat="server" ID="MainContent">
+            </asp:ContentPlaceHolder>
         </section>
     </form>
 </body>

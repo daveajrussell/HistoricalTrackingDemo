@@ -13,6 +13,15 @@ namespace HistoricalTrackingDemo {
     public partial class SiteMaster {
         
         /// <summary>
+        /// ctlSiteSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeV2_WebForm.Controls.ctlSiteSelection ctlSiteSelection;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

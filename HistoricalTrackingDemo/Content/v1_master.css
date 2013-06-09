@@ -1,4 +1,20 @@
-﻿body {
+﻿#key {
+    margin-left: .5em;
+}
+
+#map {
+    margin: auto;
+    margin-top: .5em;
+    width: 59em;
+    height: 29em;
+    border: .1em solid #444;
+}
+
+.filter {
+    color: #444 !important;
+}
+
+body {
     height: 100%;
     width: 100%;
     background-color: #3F93CC;
@@ -13,21 +29,74 @@ a, a:visited {
 }
 
     a.ack {
-        text-decoration: underline;
+        margin-left: 2em;
         color: #444;
     }
 
-    a.filter {
-        color: #444;
-    }
-
-#key {
-    margin-left:.5em;
+table {
+    margin: auto;
+    margin-bottom: 1em;
+    width: 85%;
+    border-collapse: collapse;
+    border: .1em solid #444;
+    border-radius: .5em;
 }
+
+    table p {
+        margin: 0;
+        padding: 0;
+    }
+
+    table tr {
+        width: 100%;
+        border: .1em solid #444;
+        color: #444;
+    }
+
+        table tr:nth-child(odd) {
+            background-color: #D1F5FF;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #EEE;
+        }
+
+    table td {
+        margin: .5em;
+        border: .1em solid #444;
+    }
+
+        table td.item-link {
+            text-align: center;
+        }
+
+        table td.item-title {
+            text-align: left;
+        }
+
+        table td.item-title {
+            text-align: left;
+        }
+
+h1 {
+    margin-left: .5em;
+    font: bold 1.2em verdana;
+}
+
+h2 {
+    margin-left: 5em;
+    font: normal 1em verdana;
+}
+
+h3 {
+    margin-left: 6em;
+    font: normal 1em verdana;
+}
+
 
 #main {
     position: absolute;
-    top: 50%;
+    top: 20em;
     margin-top: -7.5em;
     left: 50%;
     margin-left: -30em;
@@ -38,14 +107,6 @@ a, a:visited {
     -webkit-border-radius: .5em;
     border-radius: .5em;
     min-height: 15em;
-}
-
-#map {
-    margin:auto;
-    margin-top:.5em;
-    width: 59em;
-    height: 29em;
-    border: .1em solid #444;
 }
 
 .div-page-title {
@@ -69,7 +130,7 @@ a, a:visited {
 }
 
 .segment-active {
-    margin-bottom:1em;
+    margin-bottom: 1em;
 }
 
     .segment-active p {
@@ -83,4 +144,63 @@ a, a:visited {
 
 .segment-experience {
     margin-left: 5em;
+}
+
+#div-site-selection {
+    background-color: #888;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#888));
+    background-image: -webkit-linear-gradient(top, #ccc, #888);
+    background-image: -moz-linear-gradient(top, #ccc, #888);
+    background-image: -o-linear-gradient(top, #ccc, #888);
+    background-image: linear-gradient(to bottom, #ccc, #888);
+    -webkit-border-radius: .5em .5em 0 0;
+    border-radius: .5em .5em 0 0;
+    border: .1em solid #444;
+    position: relative;
+    top: -1em;
+    color: #ccc;
+}
+
+#site-selection {
+    list-style: none;
+}
+
+.site-selection-item {
+    display: inline-block;
+}
+
+.link {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-top: .2em;
+    margin-right: .9em;
+    padding: .1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+
+    .link:hover {
+        color: #444;
+    }
+
+    .link.active {
+        color: #444 !important;
+    }
+
+#contact-selection {
+    list-style: none;
+    float: left;
+    margin-top: 3em;
+    margin-left: 8em;
+}
+
+.contact-selection-item {
+    display: inline-block;
+    margin-right: 2em;
+}
+
+#project-selection {
+    list-style: none;
 }

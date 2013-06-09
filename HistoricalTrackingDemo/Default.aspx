@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Projects" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HistoricalTrackingDemo._Default" %>
+﻿<%@ Page Title="Development Projects by Dave Russell" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HistoricalTrackingDemo._Default" %>
 
 <%@ Register TagPrefix="ctl" TagName="HistoricalDataViewer" Src="~/Controls/ctlHistoricalDataViewer.ascx" %>
 <%@ Register TagPrefix="ctl" TagName="FilteredHistoricalDataViewer" Src="~/Controls/ctlFilteredHistoricalDataViewer.ascx" %>
@@ -15,7 +15,7 @@
                         A demo of a module from my Final Year Project. Historical tracking data collected from smartphones is displayed on a map. The map can be filtered to show a single session; try #835.
                     </p>
                     <p>
-                        Code can be found at&nbsp;<a class="ack" href="https://github.com/daveajrussell/HistoricalTrackingDemo" target="_blank">GitHub</a>.
+                        Code can be found at&nbsp;<a class="filter" href="https://github.com/daveajrussell/HistoricalTrackingDemo" target="_blank">GitHub</a>.
                     </p>
                 </div>
 

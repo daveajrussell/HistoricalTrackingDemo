@@ -16,6 +16,8 @@ namespace HistoricalTrackingDemo
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            this.ViewState["PageTitle"] = "Historical Data Demo";
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;

@@ -15,13 +15,15 @@
 
         var map = new google.maps.Map(document.getElementById('map'), mapOpts);
 
-        <% foreach (var period in this.DataSource) { %>
+        <% foreach (var period in this.DataSource)
+           { %>
 
-                var path = [];
+        var path = [];
 
-                <% foreach (var item in period.Coordinates) { %>
-                        var latlng = new google.maps.LatLng('<%= item.Latitude %>', '<%= item.Longitude %>');
-                        path.push(latlng);
+                <% foreach (var item in period.Coordinates)
+                   { %>
+        var latlng = new google.maps.LatLng('<%= item.Latitude %>', '<%= item.Longitude %>');
+        path.push(latlng);
                 <% } %>
 
         $('#key').find('#<%= period.SessionID%>').css('background-color', '#000000');
@@ -63,22 +65,18 @@
 
 </script>
 
-<div id="home" class="segment-active">
-    <div class="section">
-        <div id="map">
-        </div>
+<div id="map">
+</div>
 
-        <div id="key">
-            <asp:Repeater runat="server" ID="rptSessionKeys">
-                <ItemTemplate>
-                    <span id='<%#Eval("SessionID") %>' style="width:10px;height:10px;display:inline-block"></span> 
-                    =
-                    <asp:Label runat="server" ID="lnkFilter" CssClass="filter" Text='<%#DataBinder.Eval(Container.DataItem, "Display")%>'></asp:Label>
-                    <br />
-                </ItemTemplate>
-            </asp:Repeater>
+<div id="key">
+    <asp:Repeater runat="server" ID="rptSessionKeys">
+        <ItemTemplate>
+            <span id='<%#Eval("SessionID") %>' style="width: 10px; height: 10px; display: inline-block"></span>
+            =
+                    <asp:Label runat="server" ID="lnkFilter" Text='<%#DataBinder.Eval(Container.DataItem, "Display")%>'></asp:Label>
+            <br />
+        </ItemTemplate>
+    </asp:Repeater>
 
-            <asp:LinkButton runat="server" ID="lnkRemoveFilter" CssClass="filter" CommandName="Back" OnCommand="lnkRemoveFilter_Command" Text="Back"></asp:LinkButton>
-        </div>
-    </div>
+    <asp:LinkButton runat="server" ID="lnkRemoveFilter" CommandName="Back" OnCommand="lnkRemoveFilter_Command" Text="Back"></asp:LinkButton>
 </div>

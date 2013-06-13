@@ -11,6 +11,7 @@ namespace HomeV2_WebForm.Controls
     {
         public string Display { get; set; }
         public string URL { get; set; }
+        public string Target { get; set; }
     }
 
     public partial class ctlSiteSelection : System.Web.UI.UserControl
@@ -19,23 +20,27 @@ namespace HomeV2_WebForm.Controls
         {
             new SiteSelection()
             {
-                Display = "Home",
-                URL = "http://www.daveajrussell.com/Home"
-            },
-            new SiteSelection()
-            {
                 Display = "Projects",
-                URL = "http://www.daveajrussell.com/Projects"
+                URL = "http://www.daveajrussell.com/Projects",
+                Target = "_self"
             },
             new SiteSelection()
             {
                 Display = "Contact",
-                URL = "http://www.daveajrussell.com/Contact"
+                URL = "http://www.daveajrussell.com/Contact",
+                Target = "_self"
+            },
+            new SiteSelection()
+            {
+                Display = "Blog",
+                URL = "http://daveajrussell.wordpress.com/",
+                Target = "_blank"
             },
             new SiteSelection()
             {
                 Display = "Acknowledgements",
-                URL = "http://www.daveajrussell.com/Acknowledgements"
+                URL = "http://www.daveajrussell.com/Acknowledgements",
+                Target = "_self"
             }
         };
 

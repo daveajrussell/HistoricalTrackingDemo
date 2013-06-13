@@ -1,0 +1,40 @@
+﻿body {
+    background-color: #020031;
+    background-image: -webkit-gradient(linear, left, right, from(#6d3353), to(#999)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(left, #6d3353, #999); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image: -moz-linear-gradient(left, #6d3353, #999); /* Firefox 3.6-15 */
+    background-image: -o-linear-gradient(left, #6d3353, #999); /* Opera 11.10-12.00 */
+    background-image: linear-gradient(to right, #6d3353, #999); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+#key {
+    margin-left: .5em;
+}
+
+#map {
+    margin: auto;
+    margin-top: .5em;
+    width: 95%;
+    height: 29em;
+    border: .1em solid #444;
+    margin-bottom: 1em;
+}
+
+.container.page-container {
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 20px;
+    min-height: 180px;
+}
+
+.container-translucent {
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    background-color: #444;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding: 1em;
+}

@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HomeV2_WebForm.Controls
-{
+namespace HomeV2_WebForm.Controls {
     
     
     public partial class ctlSiteSelection {

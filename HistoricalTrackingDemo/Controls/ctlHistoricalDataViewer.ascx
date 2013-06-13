@@ -15,27 +15,29 @@
 
         var map = new google.maps.Map(document.getElementById('map'), mapOpts);
 
-        <% foreach (var period in this.DataSource) { %>
+        <% foreach (var period in this.DataSource)
+           { %>
 
-            var path = [];
+        var path = [];
 
-        <% foreach (var item in period.Coordinates) { %>
-                var latlng = new google.maps.LatLng('<%= item.Latitude %>', '<%= item.Longitude %>');
-                path.push(latlng);
+        <% foreach (var item in period.Coordinates)
+           { %>
+        var latlng = new google.maps.LatLng('<%= item.Latitude %>', '<%= item.Longitude %>');
+        path.push(latlng);
         <% } %>
 
-            var hex = getHex();
+        var hex = getHex();
 
-            $('#key').find('#<%= period.SessionID%>').css('background-color', hex); 
+        $('#key').find('#<%= period.SessionID%>').css('background-color', hex);
 
-            poly = new google.maps.Polyline({
-                path: path,
-                strokeColor: hex,
-                strokeOpacity: 1.0,
-                strokeWeight: 3
-            });
+        poly = new google.maps.Polyline({
+            path: path,
+            strokeColor: hex,
+            strokeOpacity: 1.0,
+            strokeWeight: 3
+        });
 
-            poly.setMap(map);
+        poly.setMap(map);
 
         <% } %>
 
@@ -47,20 +49,16 @@
 
 </script>
 
-<div id="home" class="segment-active">
-    <div class="section">
-        <div id="map">
-        </div>
+<div id="map">
+</div>
 
-        <div id="key">
-            <asp:Repeater runat="server" ID="rptSessionKeys">
-                <ItemTemplate>
-                    <span id="<%#Eval("SessionID") %>" style="width:10px;height:10px;display:inline-block"></span> 
-                    =
-                    <asp:LinkButton runat="server" ID="lnkFilter" CssClass="filter" OnCommand="lnkFilter_Command" CommandName="SessionID" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "SessionID") %>' Text='<%#DataBinder.Eval(Container.DataItem, "Display")%>'></asp:LinkButton>
-                    <br />
-                </ItemTemplate>
-            </asp:Repeater>
-        </div>
-    </div>
+<div id="key">
+    <asp:Repeater runat="server" ID="rptSessionKeys">
+        <ItemTemplate>
+            <span id="<%#Eval("SessionID") %>" style="width: 10px; height: 10px; display: inline-block"></span>
+            =
+                    <asp:LinkButton runat="server" ID="lnkFilter" OnCommand="lnkFilter_Command" CommandName="SessionID" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "SessionID") %>' Text='<%#DataBinder.Eval(Container.DataItem, "Display")%>'></asp:LinkButton>
+            <br />
+        </ItemTemplate>
+    </asp:Repeater>
 </div>

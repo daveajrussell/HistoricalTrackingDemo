@@ -11,13 +11,9 @@
     <meta name="description" content="Computer Science graduate with commercial experience developing in C#, ASP.NET, MVC, WCF, SQL, JavaScript, JQuery and native smartphone development." />
     <meta name="author" content="Dave Russell" />
     <link rel="icon" href="~/favicon.ico" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/v1_master.css" />
-    <link rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px)" href="~/Content/v1_master_mobile.css" />
-    <!--
-        [if IEMobile]>
-        <link rel="stylesheet" type="text/css" media="screen" href="~/Content/v1_master_mobile.css">
-        <![endif]>
-    -->
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="~/Content/bootstrap_extensions.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 </head>
 <body>
     <form runat="server">
@@ -27,18 +23,13 @@
                 <asp:ScriptReference Name="jquery.ui.combined" />
                 <asp:ScriptReference Path="~/Scripts/Pages/Master.js" />
                 <asp:ScriptReference Path="~/Scripts/Pages/SiteSelection.js" />
+                <asp:ScriptReference Path="~/Content/bootstrap/js/bootstrap.min.js" />
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="div-page-title">
-            <%= this.ViewState["PageTitle"] %>
-        </div>
-
-        <section id="main">
-            <ctl:SiteSelect runat="server" ID="ctlSiteSelection" />
-            <asp:ContentPlaceHolder runat="server" ID="MainContent">
-            </asp:ContentPlaceHolder>
-        </section>
+        <ctl:SiteSelect runat="server" ID="ctlSiteSelection" />
+        <asp:ContentPlaceHolder runat="server" ID="MainContent">
+        </asp:ContentPlaceHolder>
     </form>
 
     <script type="text/javascript">

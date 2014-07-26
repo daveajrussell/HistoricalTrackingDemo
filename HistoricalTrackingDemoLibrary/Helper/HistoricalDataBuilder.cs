@@ -12,7 +12,7 @@ namespace HistoricalTrackingDemoLibrary.Helper
         public static List<HistoricalData> ToHistoricalDataList(this DataSet oSet)
         {
             return (from item in oSet.FirstDataTableAsEnumerable()
-                   orderby item.Field<int>("HISTORICAL_SESSION_ID") descending, item.Field<DateTime>("TIMESTAMP") ascending
+                   orderby item.Field<int>("HISTORICAL_SESSION_ID") ascending, item.Field<DateTime>("TIMESTAMP") ascending
                    group item by new { SessionID = item.Field<int>("HISTORICAL_SESSION_ID"), TimeStamp = item.Field<DateTime>("TIMESTAMP").Date } into g
                    select new HistoricalData()
                    {
@@ -31,7 +31,7 @@ namespace HistoricalTrackingDemoLibrary.Helper
         public static List<HistoricalData> ToFilteredHistoricalData(this DataSet oSet)
         {
             return (from item in oSet.FirstDataTableAsEnumerable()
-                    orderby item.Field<int>("HISTORICAL_SESSION_ID") descending, item.Field<DateTime>("TIMESTAMP") ascending
+                    orderby item.Field<int>("HISTORICAL_SESSION_ID") ascending, item.Field<DateTime>("TIMESTAMP") ascending
                     group item by new { SessionID = item.Field<int>("HISTORICAL_SESSION_ID"), TimeStamp = item.Field<DateTime>("TIMESTAMP").Date } into g
                     select new HistoricalData()
                     {

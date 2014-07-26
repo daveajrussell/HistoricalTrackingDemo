@@ -7,7 +7,7 @@
     <div class="container page-container">
 
         <p>
-            A demo of a module from my Final Year Project. Historical tracking data collected from smartphones is displayed on a map. The map can be filtered to show a single session; try #835.
+            A demo of a module from my Final Year Project. Historical tracking data collected from smartphones is displayed on a map. The map can be filtered to show a single session; <asp:LinkButton runat="server" ID="lnkFilter" OnCommand="lnkFilter_Command" CommandName="SessionID" CommandArgument="835" Text="try #835"></asp:LinkButton>.
         </p>
         <p>
             Code can be found at&nbsp;<a href="https://github.com/daveajrussell/HistoricalTrackingDemo" target="_blank">GitHub</a>.

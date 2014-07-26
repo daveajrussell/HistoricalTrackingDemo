@@ -28,6 +28,12 @@ namespace HistoricalTrackingDemo
             BindFilteredData(iSessionID);
         }
 
+        protected void lnkFilter_Command(object sender, CommandEventArgs e)
+        {
+            if ("SessionID" == e.CommandName)
+                this.BindFilteredData(Int32.Parse(e.CommandArgument.ToString()));
+        }
+
         private void BindData()
         {
             var data = HistoricalDataServer.GetHistoricalDataList();

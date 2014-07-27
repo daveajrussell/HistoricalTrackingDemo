@@ -32,6 +32,12 @@ namespace HomeV2_WebForm.Controls
             },
             new SiteSelection()
             {
+                Display = "Blog",
+                URL = "http://daveajrussell.wordpress.com",
+                Target =  "_blank"
+            },
+            new SiteSelection()
+            {
                 Display = "Acknowledgements",
                 URL = "http://www.daveajrussell.com/Acknowledgements",
                 Target = "_self"
